@@ -76,12 +76,5 @@ def analyze(req: AnalyzeReq):
     except Exception as e:
         raise HTTPException(500, f"Analyze failed: {e}")
 from tv_ai_engine import analyze_xau_tradingview_style
-
-@app.post("/analyze-tradingview")
-def analyze_tradingview(period_days: int = 365):
-    try:
-        res = analyze_xau_tradingview_style(period_days=period_days, interval="1h")
-        # optionally send Telegram here
-        return {"status":"ok","data":res}
-    except Exception as e:
-        raise HTTPException(500, str(e))
+from fastapi import HTTPException
+import os
