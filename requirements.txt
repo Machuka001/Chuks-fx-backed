@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+pandas
+numpy
+scikit-learn
+ta
+python-telegram-bot
+matplotlib
+joblib
+pydantic
+yfinance
